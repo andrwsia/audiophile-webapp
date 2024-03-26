@@ -1,0 +1,40 @@
+@use "grid-base" as gridBase;
+
+@mixin v2-product-banner-grid_grid-primary {
+    grid-template-columns: 
+        [v2-pbg_area-1-start v2-pbg_area-2-start]
+            1fr
+        [v2-pbg_area-1-end]
+            1fr
+        [v2-pbg_area-2-end v2-pbg_area-1-end]
+    ;
+}
+
+@mixin v2-product-banner-grid_grid-secondary {
+    grid-template-columns: 
+        [v2-pbg_area-1-start v2-pbg_area-2-start]
+            2fr
+        [v2-pbg_area-2-end v2-pbg_area-1-end]
+    ;
+}
+
+.v2-product-banner-grid {
+    @include gridBase.grid-container_grid-area;
+    display: grid;
+    @include v2-product-banner-grid_grid-secondary;
+}
+
+@media (min-width: 768px) {
+    .v2-product-banner-grid {
+        @include v2-product-banner-grid_grid-primary;
+    }
+}
+
+.v2-pbg-area-1 {
+    grid-area: v2-pbg_area-1;
+}
+
+.v2-pbg-area-2 {
+    z-index: -1;
+    grid-area: v2-pbg_area-2;
+}

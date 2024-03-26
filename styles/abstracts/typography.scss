@@ -1,0 +1,247 @@
+@use 'colors';
+
+:root {
+    /* Text Flow-Spacing */
+    --text-flow-spacing: 2rem;
+
+    /* Font Size */
+    --fs-h1: 3.5rem; /* 56px / 16px = 3.5rem */
+    --fs-h2: 2.5rem; /* 40px / 16px = 2.5rem */
+    --fs-h3: 2rem; /* 32px / 16px = 2rem */
+    --fs-h4: 1.75rem; /* 28px / 16px = 1.75rem */
+    --fs-h5: 1.5rem; /* 24px / 16px = 1.5rem */
+    --fs-500: 0.9375rem; /* 15px / 16px = 0.9375rem */
+    --fs-400: 0.875rem; /* 14px / 16px = 0.875rem */
+    --fs-300: 0.8125rem; /* 13px / 16px = 0.8125rem */
+
+    /* Font Weight */
+    --fw-h1: 700;
+    --fw-h2: 700;
+    --fw-h3: 700;
+    --fw-h4: 700;
+    --fw-h5: 700;
+    --fw-700: 700;
+    --fw-500: 500;
+    --fw-400: 400;
+    --fw-300: 300;
+
+    /* Letter Spacing */
+    --lp-h1: 2px;
+    --lp-h2: 1.5px;
+    --lp-h3: 1.15px;
+    --lp-h4: 2px;
+    --lp-h5: 1.7px;
+    --lp-h6: 1.3px;
+    --lp-500: normal;
+    --lp-400: 10px;
+    --lp-300: 1px;
+
+    /* Line Height */
+    --lh-h1: 58px;
+    --lh-h2: 44px;
+    --lh-h3: 36px;
+    --lh-h4: 38px;
+    --lh-h5: 33px;
+    --lh-h6: 24px;
+    --lh-500: 25px;
+    --lh-400: 19px;
+    --lh-300: 25px;
+    --lh-none: 0px;
+}
+
+// Text-Balance
+.text-balance {
+    text-wrap: balance;
+}
+
+// Typography Base Styling
+@mixin h1-base {
+    font-size: var(--fs-h1);
+    font-weight: var(--fw-h1);
+    text-transform: uppercase;
+    line-height: var(--lh-h1);
+    letter-spacing: var(--lp-h1);
+    max-width: 400px;
+}
+
+@mixin h2-base {
+    font-size: var(--fs-h2);
+    font-weight: var(--fw-h2);
+    text-transform: uppercase;
+    line-height: var(--lh-h2);
+    letter-spacing: var(--lp-h2);
+}
+
+@mixin h3-base {
+    font-size: var(--fs-h3);
+    font-weight: var(--fw-h3);
+    text-transform: uppercase;
+    line-height: var(--lh-h3);
+    letter-spacing: var(--lp-h3);
+}
+
+@mixin h4-base {
+    font-size: var(--fs-h4);
+    font-weight: var(--fw-h4);
+    text-transform: uppercase;
+    line-height: var(--lh-h4);
+    letter-spacing: var(--lp-h4);
+}
+
+@mixin h5-base {
+    font-size: var(--fs-h5);
+    font-weight: var(--fw-h5);
+    text-transform: uppercase;
+    line-height: var(--lh-h5);
+    letter-spacing: var(--lp-h5);
+}
+
+@mixin h6-base {
+    font-size: var(--fs-h6);
+    font-weight: var(--fw-700);
+    text-transform: uppercase;
+    line-height: var(--lh-h6);
+    letter-spacing: var(--lp-h6);
+}
+
+@mixin overline-base {
+    text-decoration-line: none !important; 
+    font-size: var(--fs-400);
+    font-weight: var(--fw-400);
+    text-transform: uppercase;
+    line-height: var(--lh-400);
+    letter-spacing: var(--lp-400);
+}
+
+@mixin sub-title-base {
+    font-size: var(--fs-300);
+    font-weight: var(--fw-700);
+    text-transform: uppercase;
+    line-height: var(--lh-300);
+    letter-spacing: var(--lp-300);
+}
+
+@mixin body-text-base {
+    font-size: var(--fs-500);
+    font-weight: var(--fw-500);
+    text-transform: normal;
+    line-height: var(--lh-500);
+    letter-spacing: var(--lp-500);
+    max-width: 378px;
+}
+
+// Custom Typography Classes
+.h1-dark {
+    @include h1-base;
+    color: var(--black-1);
+}
+
+.h1-light {
+    @include h1-base;
+    color: var(--white-1);
+}
+
+.h2-dark {
+    @include h2-base;
+    color: var(--black-1);
+}
+
+.h2-light {
+    @include h2-base;
+    color: var(--white-1);
+}
+
+.h3-dark {
+    @include h3-base;
+    color: var(--black-1);
+}
+
+.h4-dark {
+    @include h4-base;
+    color: var(--black-1);
+}
+
+.h5-dark {
+    @include h5-base;
+    color: var(--black-1);
+}
+
+.h6-dark {
+    @include h6-base;
+    color: var(--black-1);
+}
+
+.overline-light {
+    @include overline-base;
+    color: var(--white-3);
+}
+
+.overline-orange {
+    @include overline-base;
+    color: var(--orange-1);
+}
+
+.sub-title-light {
+    @include sub-title-base;
+    color: var(--white-1);
+}
+
+.sub-title-light:hover {
+    color: var(--orange-1);
+}
+
+.sub-title-dark {
+    @include sub-title-base;
+    color: var(--black-1);
+}
+
+.sub-title-dark:hover {
+    color: var(--orange-1);
+}
+
+.body-text-light {
+    @include body-text-base;
+    color: var(--white-3);
+}
+
+.body-text-alt {
+    @include body-text-base;
+    color: var(--grey-2);
+}
+
+.svg-icon {
+    // -webkit-mask-image: var(--mask-image-url);
+    // mask-image: var(--mask-image-url);
+    mask-repeat: no-repeat;
+    background-color: var(--white-1);
+}
+
+.svg-icon:hover {
+    background-color: var(--orange-1);
+}
+
+// Responsive Typography
+@media (max-width: 319px) {
+    :root {
+        --fs-h1: 10vw;
+        --lh-h1: 10vw;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 424px) {
+    :root {
+        --fs-h1: 36px;
+        --fs-h2: 28px;
+        --fs-h3: 24px;
+        --lh-h1: 40px;
+        --lh-h2: auto;
+    }
+}
+
+@media (min-width: 425px) and (max-width: 500px) {
+    :root {
+        --fs-h1: 46px;
+        --fs-h2: 34px;
+        --lh-h1: 50px;
+    }
+}

@@ -1,0 +1,34 @@
+:root {
+    // Colors
+    --orange-1: rgb(216, 125, 74);
+    --orange-2: rgb(251, 175, 133);
+    --black-1: rgb(0, 0, 0);
+    --black-2: rgb(24, 24, 24);
+    --black-3: rgb(16, 16, 16);
+    --white-1: rgb(255, 255, 255);
+    --white-2: rgb(250, 250, 250);
+    --white-3: rgb(241, 241, 241);
+    --grey-1: rgb(235, 235, 235);
+    --grey-2: rgb(151, 151, 151);
+    --grey-3: rgb(76, 76, 76);
+
+    // Background Colors
+    --bg_white-1: var(--white-1);
+    --bg_white-3: var(--white-3);
+    --bg_black-1: var(--black-1);
+    --bg_black-2: var(--black-2);
+    --bg_grey-1: var(--grey-1);
+    --bg_orange-1: var(--orange-1);
+}
+
+.orange-1 {
+    color: var(--orange-1);
+}
+
+.bg-orange-1 {
+    background: var(--orange-1);
+}
+
+.bg-white-3 {
+    background: var(--bg_white-3);
+}

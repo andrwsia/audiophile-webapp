@@ -1,0 +1,38 @@
+@mixin card-category_grid {
+    grid-template-columns: 
+        [ccg-area-1-start ccg-area-2-start]
+            minmax(1rem, 3fr)
+        [ccg-content-start]
+            minmax(8.15rem, 4fr)
+        [ccg-content-end]
+            minmax(1rem, 3fr)
+        [ccg-area-2-end ccg-area-1-end]
+    ;
+    
+    grid-template-rows: 
+        [ccg-area-1-start ccg-content-start]
+            1fr
+        [ccg-area-1-end ccg-area-2-start]
+            4fr
+        [ccg-content-end ccg-area-2-end]
+    ;
+}
+
+.card-category-grid {
+    display: grid;
+    @include card-category_grid;
+}
+
+.ccg-area-1 {
+    background: var(--bg_white-1);
+    grid-area: ccg-area-1;
+}
+
+.ccg-area-2 {
+    background: var(--bg_grey-1);
+    grid-area: ccg-area-2;
+}
+
+.ccg-content {
+    grid-area: ccg-content;
+}

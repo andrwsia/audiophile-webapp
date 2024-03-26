@@ -1,0 +1,69 @@
+@use '../abstracts/colors';
+@use '../abstracts/typography';
+
+:root {
+    --button-width: 160px;
+    --button-height: 48px;
+    --border-black: 1px solid var(--black-1);
+    --border-transparent: 1px solid transparent;
+}
+
+@mixin button-dimension {
+    width: var(--button-width);
+    height: var(--button-height);
+}
+
+@mixin button-base {
+    @include button-dimension;
+    font-size: var(--fs-300);
+    font-weight: var(--fw-700);
+    text-transform: uppercase;
+    letter-spacing: var(--lp-300);
+    transition: .5s ease-out;
+}
+
+.button-1 {
+    @include button-base;
+    background: var(--orange-1);
+    color: var(--white-1);
+    border: var(--border-transparent);
+}
+
+.button-1:hover {
+    background: var(--orange-2);
+}
+
+.button-2 {
+    @include button-base;
+    background: transparent;
+    color: var(--black-1);
+    border: var(--border-black);
+}
+
+.button-2:hover {
+    background: var(--black-1);
+    color: var(--white-1);
+}
+
+.button-2-alt {
+    @include button-base;
+    background: var(--black-1);
+    color: var(--white-1);
+    border: var(--border-transparent);
+}
+
+.button-2-alt:hover {
+    background: var(--grey-3);
+    color: var(--white-1);
+}
+
+.button-3 {
+    @include button-base;
+    background-color: var(--grey-1);
+    color: var(--black-1);
+    border: var(--border-transparent);
+}
+
+.button-3:hover {
+    color: var(--orange-1);
+}

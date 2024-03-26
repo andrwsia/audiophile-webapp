@@ -1,0 +1,311 @@
+// STATUS: Optimize this file when you get the chance to
+
+:root {
+  --2xl-300: 98em; /* 1568px / 16px = 98em */
+  --2xl-200: 97.9375em; /* 1567px / 16px = 97.9375em */
+  --2xl-100: 96em; /* 1536px / 16px = 96em */
+  --xl-100: 80em; /* 1280px / 16px = 80em */
+  --lg-200: 64.0625em; /* 1025px / 16px = 64.0625em */
+  --lg-100: 64em; /* 1024px / 16px = 64em */
+  --md-200: 48.0625em; /* 769px / 16px = 48.0625em */
+  --md-100: 48em; /* 768px / 16px = 48em */
+  --sm-200: 40.0625em; /* 641px / 16px = 40.0625em */
+  --sm-100: 40em; /* 640px / 16px = 40em */
+
+  /* Global Variables -- Start */
+  --padding-inline: 1rem;
+  /* Global Variables -- End */
+
+  /* Max-Height Variables -- Start */
+  --height: auto;
+  /* Max-Height Variables -- End */
+
+  /* Max-Width Variables 2 Columns -- Start */
+  --2xl-width-2col: calc(var(--2xl-100) / 2);
+  /* Max-Width Variables 2 Columns -- End */
+
+  /* Max-Width Variables 3 Columns -- Start */
+  --2xl-width-3col: calc(var(--2xl-width-2col) / 2);
+  --2xl-width-3col_200: calc(var(--2xl-100) / 3);
+  /* Max-Width Variables 3 Columns -- End */
+
+  /** Grid {Overlap Left} -- Start **/
+  /* Description: Right column overlaps left column. Left column is full-width */
+  /* 2xl Parent Column & Row -- Start */
+  --2xl-parent-grid-col-overlap-left:
+    [full-width-start wrapper-1-start] 
+      minmax(var(--padding-inline), .5fr) 
+    [content-1-start] 
+      min(100% - (var(--padding-inline) * 2), var(--2xl-width-2col)) 
+    [content-1-end wrapper-2-start] 
+      min(100% - (var(--padding-inline) * 2), var(--2xl-width-3col)) 
+    [wrapper-1-end] 
+      min(100% - (var(--padding-inline) * 2), var(--2xl-width-3col)) 
+    [wrapper-2-end] 
+      minmax(var(--padding-inline), .5fr) 
+    [full-width-end]
+  ;
+
+  --2xl-parent-grid-row-overlap-left:
+    [full-width-start wrapper-1-start] 
+      minmax(var(--padding-inline), 1fr) 
+    [wrapper-2-start] 
+      min(100% - (var(--padding-inline) * 2), var(--height)) 
+    [wrapper-2-end] 
+      minmax(var(--padding-inline), 1fr) 
+    [wrapper-1-end full-width-end]
+  ;
+  /* 2xl Parent Column & Row -- End */
+
+  /* 2xl Child Column -- Start */
+  --2xl-child-grid-col-overlap-left:
+    [wrapper-1-start] 
+      minmax(var(--padding-inline), 1fr) 
+    [content-1-start] 
+      min(100% - (var(--padding-inline) * 2), var(--2xl-width-2col)) 
+    [content-1-end] 
+      min(100% - (var(--padding-inline) * 2), var(--2xl-width-3col)) 
+    [wrapper-1-end]
+  ;
+  /* 2xl Child Column -- End */
+
+  /* xl Parent Column & Row -- Start */
+  --xl-parent-grid-col-overlap-left:
+    [full-width-start wrapper-1-start] 
+      minmax(var(--padding-inline), .5fr) 
+    [content-1-start] 
+      minmax(var(--padding-inline), 4fr) 
+    [content-1-end wrapper-2-start] 
+      minmax(var(--padding-inline), 2fr) 
+    [wrapper-1-end] 
+      minmax(var(--padding-inline), 2fr) 
+    [wrapper-2-end] 
+      minmax(var(--padding-inline), .5fr) 
+    [full-width-end]
+  ;
+
+  --xl-parent-grid-row-overlap-left:
+    [full-width-start wrapper-1-start] 
+      minmax(var(--padding-inline), 1fr) 
+    [wrapper-2-start] 
+      min(100% - (var(--padding-inline) * 2), var(--height)) 
+    [wrapper-2-end] 
+      minmax(var(--padding-inline), 1fr) 
+    [wrapper-1-end full-width-end]
+  ;
+  /* xl Parent Column & Row -- End */
+
+  /* xl Child Column -- Start */
+  --xl-child-grid-col-overlap-left:
+    [wrapper-1-start] 
+      .5fr 
+    [content-1-start] 
+      4fr 
+    [content-1-end] 
+      2fr 
+    [wrapper-1-end]
+  ;
+  /* xl Child Column -- End */
+
+  /* lg Parent Column & Row -- Start */
+  --lg-parent-grid-col-overlap-left:
+    [full-width-start wrapper-1-start] 
+      minmax(var(--padding-inline), .5fr) 
+    [content-1-start] 
+      minmax(var(--padding-inline), 4fr) 
+    [content-1-end wrapper-2-start] 
+      minmax(var(--padding-inline), 2fr) 
+    [wrapper-1-end] 
+      minmax(var(--padding-inline), 2fr) 
+    [wrapper-2-end] 
+      minmax(var(--padding-inline), .5fr) 
+    [full-width-end]
+  ;
+
+  --lg-parent-grid-row-overlap-left:
+    [full-width-start wrapper-1-start] 
+      minmax(var(--padding-inline), 1fr) 
+    [wrapper-2-start] 
+      min(100% - (var(--padding-inline) * 2), var(--height)) 
+    [wrapper-2-end] 
+      minmax(var(--padding-inline), 1fr) 
+    [wrapper-1-end full-width-end]
+  ;
+  /* lg Parent Column & Row -- End */
+
+  /* lg Child Column -- Start */
+  --lg-child-grid-col-overlap-left:
+    [wrapper-1-start] 
+      .5fr 
+    [content-1-start] 
+      4fr 
+    [content-1-end] 
+      2fr 
+    [wrapper-1-end]
+  ;
+  /* lg Child Column -- End */
+
+  /* md Parent Column & Row -- Start */
+  --md-parent-grid-col-overlap-left:
+    [full-width-start wrapper-1-start] 
+      minmax(var(--padding-inline), .5fr) 
+    [content-1-start] 
+      minmax(var(--padding-inline), 4fr) 
+    [content-1-end wrapper-2-start] 
+      minmax(var(--padding-inline), 2fr) 
+    [wrapper-1-end] 
+      minmax(var(--padding-inline), 2fr) 
+    [wrapper-2-end] 
+      minmax(var(--padding-inline), .5fr) 
+    [full-width-end]
+  ;
+
+  --md-parent-grid-row-overlap-left:
+    [full-width-start wrapper-1-start] 
+      minmax(var(--padding-inline), 1fr) 
+    [wrapper-2-start] 
+      min(100% - (var(--padding-inline) * 2), var(--height)) 
+    [wrapper-2-end] 
+      minmax(var(--padding-inline), 1fr) 
+    [wrapper-1-end full-width-end]
+  ;
+  /* md Parent Column & Row -- End */
+
+  /* md Child Column -- Start */
+  --md-child-grid-col-overlap-left:
+    [wrapper-1-start] 
+      .5fr 
+    [content-1-start] 
+      4fr 
+    [content-1-end] 
+      2fr 
+    [wrapper-1-end]
+  ;
+  /* md Child Column -- End */
+
+  /* sm Parent Column & Row -- Start */
+  --sm-parent-grid-col-overlap-left:
+    [full-width-start wrapper-1-start] 
+      minmax(var(--padding-inline), 1fr) 
+    [wrapper-2-start] 
+      min(100% - (var(--padding-inline) * 2), var(--sm-100)) 
+    [wrapper-2-end] 
+      minmax(var(--padding-inline), 1fr) 
+    [wrapper-1-end full-width-end]
+  ;
+
+  --sm-parent-grid-row-overlap-left:
+    [full-width-start] 
+      auto 
+    [wrapper-1-start] 
+      2fr 
+    [wrapper-2-start] 
+      1fr 
+    [wrapper-1-end] 
+      1fr 
+    [wrapper-2-end] 
+      auto 
+    [full-width-end]
+  ;
+
+  /* sm Parent Column & Row -- End */
+
+  /* sm Child Column & Row -- Start */
+  --sm-child-grid-col-overlap-left:
+    [wrapper-1-start] 
+      minmax(var(--padding-inline), auto) 
+    [content-1-start] 
+      min(100% - (var(--padding-inline) * 2), var(--sm-100)) 
+    [content-1-end] 
+      minmax(var(--padding-inline), auto) 
+    [wrapper-1-end]
+  ;
+
+  --sm-child-grid-row-overlap-left:
+    [wrapper-1-start] 
+      0 
+    [content-1-start] 
+      1fr 
+    [content-1-end] 
+      .5fr 
+    [wrapper-1-end]
+  ;
+  /* sm Child Column & Row -- End */
+  /** Grid {Overlap Left} -- End **/
+}
+
+.grid-parent_overlap-left {
+  display: grid;
+}
+
+.grid-child-1_overlap-left {
+  display: grid;
+  grid-column: wrapper-1;
+  grid-row: wrapper-1;
+}
+
+.grid-child-2_overlap-left {
+  grid-column: wrapper-2;
+  grid-row: wrapper-2;
+}
+
+.grid-content-1_overlap-left {
+  grid-column: content-1;
+}
+
+@media (max-width: 640px) {
+  .grid-parent_overlap-left {
+    grid-template-columns: var(--sm-parent-grid-col-overlap-left);
+    grid-template-rows: var(--sm-parent-grid-row-overlap-left);
+  }
+
+  .grid-child-1_overlap-left {
+    grid-template-columns: var(--sm-child-grid-col-overlap-left);
+    grid-template-rows: var(--sm-child-grid-row-overlap-left);
+  }
+}
+
+
+@media (min-width: 641px) and (max-width: 768px) {
+  .grid-parent_overlap-left {
+    grid-template-columns: var(--md-parent-grid-col-overlap-left);
+    grid-template-rows: var(--md-parent-grid-row-overlap-left);
+  }
+
+  .grid-child-1_overlap-left {
+    grid-template-columns: var(--md-child-grid-col-overlap-left);
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .grid-parent_overlap-left {
+    grid-template-columns: var(--lg-parent-grid-col-overlap-left);
+    grid-template-rows: var(--lg-parent-grid-row-overlap-left);
+  }
+
+  .grid-child-1_overlap-left {
+    grid-template-columns: var(--lg-child-grid-col-overlap-left);
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1567px) {
+  .grid-parent_overlap-left {
+    grid-template-columns: var(--xl-parent-grid-col-overlap-left);
+    grid-template-rows: var(--xl-parent-grid-row-overlap-left);
+  }
+
+  .grid-child-1_overlap-left {
+    grid-template-columns: var(--xl-child-grid-col-overlap-left);
+  }
+}
+
+@media (min-width: 1568px) {
+  .grid-parent_overlap-left {
+    grid-template-columns: var(--2xl-parent-grid-col-overlap-left);
+    grid-template-rows: var(--2xl-parent-grid-row-overlap-left);
+  }
+
+  .grid-child-1_overlap-left {
+    grid-template-columns: var(--2xl-child-grid-col-overlap-left);
+  }
+}

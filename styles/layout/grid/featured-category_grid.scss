@@ -1,0 +1,8 @@
+@use "grid-base" as gridBase;
+
+.featured-grid {
+    @include gridBase.grid-container_grid-area;
+    display: grid;
+    gap: var(--gap-1);
+    @include gridBase.grid-template-columns_auto(165px, 3, var(--gap-1));
+}

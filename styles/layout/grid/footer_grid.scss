@@ -1,0 +1,42 @@
+@use "grid-base" as gridBase;
+
+.footer-grid {
+    @include gridBase.grid-container_grid-area;
+    display: grid;
+    gap: var(--gap-1);
+    @include gridBase.grid-template-columns_auto(280px, 2, var(--gap-1));
+}
+
+.footer-grid > .footer-copyright {
+    grid-row: 4 / 5;
+}
+
+@media (max-width: 767px) {
+    .footer-grid > .footer-logo, .footer-nav, .footer-description, .footer-shareLinks, .footer-copyright {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .footer-logo {
+        grid-row: 1 / 2;
+    }
+
+    .footer-nav {
+        grid-row: 2 / 3;
+    }
+
+    .footer-description {
+        grid-row: 3 / 4;
+    }
+
+    .footer-shareLinks {
+        grid-column: 2 / 3;
+        grid-row: 4 / 5;
+    }
+
+    .footer-copyright {
+        grid-column: 1 / 2;
+        grid-row: 4 / 5;
+    }
+}

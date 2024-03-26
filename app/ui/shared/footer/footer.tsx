@@ -34,7 +34,7 @@ export default function Footer() {
                         </ul>
                     </div>
                     <div className="footer-description | flex flex-col items-center md:items-start">
-                        <p className="body-text-alt | text-center md:text-left">Audiophile is an all in one stop to fulfill your audio needs. We're a small team of music lovers and sound specialists who are devoted to helping you get the most out of personal audio. Come and visit our demo facility - we’re open 7 days a week.</p>
+                        <p className="body-text-alt | text-center md:text-left">Audiophile is an all in one stop to fulfill your audio needs. We&apos;re a small team of music lovers and sound specialists who are devoted to helping you get the most out of personal audio. Come and visit our demo facility - we&apos;re open 7 days a week.</p>
                     </div>
                     <div className="footer-shareLinks | flex items-end justify-center md:justify-end">
                         <ul className="flex gap-6">

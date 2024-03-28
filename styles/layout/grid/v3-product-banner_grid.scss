@@ -1,8 +1,0 @@
-@use "grid-base" as gridBase;
-
-.v3-product-banner-grid {
-    @include gridBase.grid-container_grid-area;
-    display: grid;
-    gap: var(--gap-1);
-    @include gridBase.grid-template-columns_auto(300px, 2, var(--gap-1));
-}

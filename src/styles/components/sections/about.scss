@@ -1,0 +1,14 @@
+@use "../../layout/grid.scss" as grid;
+
+.about-grid {
+    @include grid.grid-container_grid-area;
+    display: grid;
+    gap: var(--gap-1);
+    @include grid.grid-template-columns_auto(393.5px, 2, var(--gap-1));
+}
+
+@media (max-width: 1023px) {
+    .about-grid div:nth-child(1) {
+        grid-row: 2 / 3;
+    }
+}

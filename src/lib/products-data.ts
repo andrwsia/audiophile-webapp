@@ -3,7 +3,8 @@ import { Product } from "./type";
 import imageURL from "../../assets/product-xx99-mark-one-headphones/desktop/image-product.jpg";
 
 const xx99MarkTwoHeadphones: Product = {
-    id: 1,
+    id: 'xx99-mark-two-headphones',
+    href: "/products/headphones/xx99-mark-two-headphones",
     new: true,
     name: "XX99 Mark II Headphones",
     description: `The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your 
@@ -156,7 +157,8 @@ const xx99MarkTwoHeadphones: Product = {
 };
 
 const xx99MarkOneHeadphones: Product = {
-    id: 2,
+    id: 'xx99-mark-one-headphones',
+    href: "/products/headphones/xx99-mark-one-headphones",
     new: false,
     name: "XX99 Mark I Headphones",
     description: `As the gold standard for headphones, the classic XX99 Mark I offers detailed and accurate 
@@ -308,7 +310,8 @@ const xx99MarkOneHeadphones: Product = {
 };
 
 const xx59Headphones: Product = {
-    id: 3,
+    id: 'xx59-headphones',
+    href: "/products/headphones/xx59-headphones",
     new: false,
     name: "XX59 Headphones",
     description: `Enjoy your audio almost anywhere and customize it to your specific tastes with the XX59 headphones. 
@@ -459,7 +462,8 @@ const xx59Headphones: Product = {
 };
 
 const zx7Speaker: Product = {
-    id: 4,
+    id: 'zx7-speaker',
+    href: "/products/speakers/zx7-speaker",
     new: false,
     name: "ZX7 Speaker",
     description: `Stream high quality sound wirelessly with minimal to no loss. The ZX7 speaker uses high-end 
@@ -606,7 +610,8 @@ const zx7Speaker: Product = {
 };
 
 const zx9Speaker: Product = {
-    id: 5,
+    id: 'zx9-speaker',
+    href: "/products/speakers/zx9-speaker",
     new: true,
     name: "ZX9 Speaker",
     description: `Upgrade your sound system with the all new ZX9 active speaker. It’s a bookshelf speaker 
@@ -759,7 +764,8 @@ const zx9Speaker: Product = {
 };
 
 const yx1Earphones: Product = {
-    id: 6,
+    id: 'yx1-earphones',
+    href: "/products/earphones/yx1-earphones",
     new: true,
     name: "YX1 Wireless Earphones",
     description: `Tailor your listening experience with bespoke dynamic drivers from the new YX1 Wireless Earphones. 

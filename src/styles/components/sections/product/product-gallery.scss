@@ -1,0 +1,98 @@
+@use "/src/styles/layout/grid.scss" as grid;
+
+@mixin product-gallery-grid() {
+    grid-template-columns: 
+        [gallery-1-start gallery-2-start]
+            1.43fr
+        [gallery-1-end gallery-2-end gallery-3-start]
+            2fr
+        [gallery-3-end]
+    ;
+
+    grid-template-rows: 
+        [gallery-1-start gallery-3-start]
+            1fr
+        [gallery-1-end gallery-2-start ]
+            1fr
+        [gallery-2-end gallery-3-end]
+    ;
+}
+
+.product-gallery-grid {
+    @include grid.grid-container_grid-area;
+    display: grid;
+    gap: 1rem;
+    @include grid.grid-template-columns_auto(300px, 2, 1rem);
+}
+
+.product-gallery-one {
+    grid-column: auto;
+    grid-row: auto;
+}
+
+.product-gallery-two {
+    grid-column: auto;
+    grid-row: auto;
+}
+
+.product-gallery-three {
+    grid-column: auto;
+    grid-row: auto;
+}
+
+@media (min-width: 597px) {
+    .product-gallery-grid {
+        @include grid.grid-container_grid-area;
+        display: grid;
+        gap: 1rem;
+        @include grid.grid-template-columns_auto(200px, 2, 1rem);
+    }
+
+    .product-gallery-one {
+        grid-column: 1 / 2;
+        grid-row: 1 / 3;
+    }
+    
+    .product-gallery-two {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+    
+    .product-gallery-three {
+        grid-column: 2 / 3;
+        grid-row: 1 / 3;
+    }
+}
+
+@media (min-width: 1024px) {
+    .product-gallery-grid {
+        @include grid.grid-container_grid-area;
+        display: grid;
+        gap: 1rem;
+        @include product-gallery-grid;
+    }
+
+    .product-gallery-one {
+        grid-area: gallery-1;
+    }
+    
+    .product-gallery-two {
+        grid-area: gallery-2;
+    }
+    
+    .product-gallery-three {
+        grid-area: gallery-3;
+    }
+}
+
+@media (min-width: 1568px) {
+    .product-gallery-grid {
+        grid-template-columns: 
+        [gallery-1-start gallery-2-start]
+            1.45fr
+        [gallery-1-end gallery-2-end gallery-3-start]
+            2fr
+        [gallery-3-end]
+    ;
+    }
+}

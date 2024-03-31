@@ -1,11 +1,25 @@
 "use client"
 import Image from "next/image"
+import Link from "next/link"
 import ButtonTwoAlt from "../shared/elements/buttons/button-2-alt"
 import LargeImageSpeakerZX9 from "/public/assets/home/desktop/image-speaker-zx9.png"
 import ImageSpeakerZX9 from "/public/assets/home/tablet/image-speaker-zx9.png"
 import PatternCircles from "../shared/elements/design/pattern-circles"
+import { products } from "@/lib/products-data"
+
+// Function to get the href of a product by its id
+function getHrefById(productId: string) {
+    // Find the product with the given id
+    const product = products.find(prod => prod.id === productId);
+
+    // If product is found, return its href, otherwise return null
+    return product ? product.href : '';
+}
 
 export default function V1ProductBanner() {
+    const productId = 'zx9-speaker';
+    const href = getHrefById(productId);
+
     return (
         <>
             <section id="v1-product-banner" className="grid-container flow-spacing-1">
@@ -36,7 +50,9 @@ export default function V1ProductBanner() {
                             <h1 className="h1-light | text-center text-left-md pb-8 pt-4">ZX9 <br /> Speaker</h1>
                             <p className="body-text-light | text-center text-left-md pb-8 max-w-80">Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.</p>
                             <div className="text-center text-left-md pb-8">
-                                <ButtonTwoAlt />
+                                <Link href={href}>
+                                    <ButtonTwoAlt />
+                                </Link>
                             </div>
                         </div>
                     </div>

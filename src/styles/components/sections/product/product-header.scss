@@ -1,0 +1,29 @@
+@use "/src/styles/layout/grid.scss" as grid;
+
+.product-header-grid {
+    @include grid.grid-container_grid-area;
+    display: grid;
+    gap: var(--gap-1);
+    @include grid.grid-template-columns_auto(291px, 2, var(--gap-1));
+}
+
+@media (min-width: 768px) {
+    .product-header-grid {
+        gap: 3rem;
+        @include grid.grid-template-columns_auto(260px, 2, 3rem);
+    }
+}
+
+@media (min-width: 1024px) {
+    .product-header-grid {
+        gap: var(--gap-3);
+        @include grid.grid-template-columns_auto(300px, 2, var(--gap-3));
+    }
+}
+
+@media (min-width: 1440px) {
+    .product-header-grid {
+        gap: var(--gap-4);
+        @include grid.grid-template-columns_auto(300px, 2, var(--gap-4));
+    }
+}

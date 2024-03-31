@@ -1,0 +1,22 @@
+@use "/src/styles/layout/grid.scss" as grid;
+
+.product-features-grid {
+    @include grid.grid-container_grid-area;
+    display: grid;
+    gap: 4.5rem;
+    @include grid.grid-template-columns_auto(400px, 2, 4.5rem);
+}
+
+@media (min-width: 1024px) {
+    .product-features-grid {
+        gap: var(--gap-3);
+        @include grid.grid-template-columns_auto(350px, 2, var(--gap-3));
+    }
+}
+
+@media (min-width: 1440px) {
+    .product-features-grid {
+        gap: var(--gap-4);
+        @include grid.grid-template-columns_auto(350px, 2, var(--gap-4));
+    }
+}

@@ -1,0 +1,14 @@
+@use "/src/styles/layout/grid.scss" as grid;
+
+.recommended-container-grid {
+    display: grid;
+    gap: 3rem;
+    @include grid.grid-template-columns_auto(183.5px, 3, 3rem);
+}
+
+@media (min-width: 768px) {
+    .recommended-container-grid {
+        gap: 2rem;
+        @include grid.grid-template-columns_auto(183.5px, 3, 2rem);
+    }
+}

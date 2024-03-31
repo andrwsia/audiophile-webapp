@@ -12,7 +12,7 @@ export default function ResponsiveImage({ alt, mobile, tablet, desktop }: Respon
                 height={mobile.height}
                 quality={100}
                 priority 
-                className="w-full md:hidden"
+                className="w-full md:hidden | overflow-hidden rounded-md"
             />
             <Image 
                 src={tablet.src} 
@@ -21,7 +21,7 @@ export default function ResponsiveImage({ alt, mobile, tablet, desktop }: Respon
                 height={tablet.height}
                 quality={100}
                 priority 
-                className="w-full hidden md:block lg:hidden"
+                className="w-full hidden md:block lg:hidden | overflow-hidden rounded-md"
             />
             <Image 
                 src={desktop.src} 
@@ -30,7 +30,7 @@ export default function ResponsiveImage({ alt, mobile, tablet, desktop }: Respon
                 height={desktop.height}
                 quality={100}
                 priority  
-                className="w-full hidden lg:block"
+                className="w-full hidden lg:block | overflow-hidden rounded-md"
             />
         </>
     )

@@ -9,7 +9,6 @@ export type ResponsiveImageProps = {
     mobile: ImageProps;
     tablet: ImageProps;
     desktop: ImageProps;
-    objectFit?: string;
 }
 
 export type ProductBoxItem = {
@@ -19,7 +18,8 @@ export type ProductBoxItem = {
 export type Category = 'headphones' | 'earphones' | 'speakers';
 
 export type Product = {
-    id: number;
+    id: string;
+    href: string;
     new: boolean;
     name: string;
     description: string;
@@ -35,7 +35,8 @@ export type Product = {
 }
 
 export type ProductCategoryItem = {
-    id: number; 
+    id: string; 
+    href: string;
     new: boolean;
     name: string;
     category: string;

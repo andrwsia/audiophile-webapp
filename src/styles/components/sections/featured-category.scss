@@ -1,8 +1,0 @@
-@use "../../layout/grid.scss" as grid;
-
-.featured-grid {
-    @include grid.grid-container_grid-area;
-    display: grid;
-    gap: var(--gap-1);
-    @include grid.grid-template-columns_auto(165px, 3, var(--gap-1));
-}

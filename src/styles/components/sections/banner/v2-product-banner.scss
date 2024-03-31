@@ -1,4 +1,4 @@
-@use "../../layout/grid.scss" as grid;
+@use "/src/styles/layout/grid.scss" as grid;
 
 @mixin v2-product-banner-grid_grid-primary {
     grid-template-columns: 

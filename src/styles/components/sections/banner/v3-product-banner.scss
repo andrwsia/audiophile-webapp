@@ -1,4 +1,4 @@
-@use "../../layout/grid.scss" as grid;
+@use "/src/styles/layout/grid.scss" as grid;
 
 .v3-product-banner-grid {
     @include grid.grid-container_grid-area;

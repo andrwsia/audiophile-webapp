@@ -130,6 +130,15 @@
     max-width: 378px;
 }
 
+@mixin count-base {
+    font-size: var(--fs-500);
+    font-weight: var(--fw-700);
+    text-transform: normal;
+    line-height: var(--lh-500);
+    letter-spacing: var(--lp-500);
+    max-width: 378px;
+}
+
 // Custom Typography Classes
 .h1-dark {
     @include h1-base;
@@ -207,6 +216,11 @@
 .body-text-alt {
     @include body-text-base;
     color: var(--grey-2);
+}
+
+.count-orange {
+    @include count-base;
+    color: var(--orange-1);
 }
 
 .svg-icon {

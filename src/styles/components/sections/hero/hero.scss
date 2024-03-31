@@ -1,4 +1,4 @@
-@use "../../layout/grid.scss" as grid;
+@use "/src/styles/layout/grid.scss" as grid;
 
 @mixin hero-grid_columns-primary($start, $center, $end) {
   grid-template-columns: 

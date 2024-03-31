@@ -1,11 +1,24 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import ImageHeader from "/public/assets/home/tablet/image-header.jpg";
 import SmallImageHeader from "/public/assets/home/mobile/image-header.jpg";
-// import SmallImageHeade from "../../";
 import ButtonOne from "../shared/elements/buttons/button-1";
+import { products } from "@/lib/products-data"
+
+// Function to get the href of a product by its id
+function getHrefById(productId: string) {
+    // Find the product with the given id
+    const product = products.find(prod => prod.id === productId);
+
+    // If product is found, return its href, otherwise return null
+    return product ? product.href : '';
+}
 
 export default function Hero() {
+  const productId = 'xx99-mark-two-headphones';
+  const href = getHrefById(productId);
+
   return (
     <>
       <section id="hero" className="flow-spacing-2 relative | hero-padding-top">
@@ -23,7 +36,9 @@ export default function Hero() {
               Experience natural, lifelike audio and exceptional build quality
               made for the passionate music enthusiast.
             </p>
-            <ButtonOne />
+            <Link href={href}>
+              <ButtonOne />
+            </Link>
           </div>
           <div className="hero-grid_area-2 | flex justify-center sm:justify-end">
             <div className="background-opacity"></div>
